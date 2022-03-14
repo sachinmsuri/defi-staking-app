@@ -2,9 +2,9 @@ pragma solidity ^0.5.0;
 
 //Send & Recieve Tether
 
-contract Tether {
-    string public name = 'Tether';
-    string public symbol = 'USDT';
+contract RWD {
+    string public name = 'Reward Toekn';
+    string public symbol = 'RWD';
     uint256 public totalSupply = 1000000000000000000000000; //1 millions tokens
     uint8 public decimals = 18;
 
@@ -39,7 +39,7 @@ contract Tether {
         return true;
     }
 
-    function approve(address _spender, uint256 _value) public returns (bool sucess) {
+    function  approve(address _spender, uint256 _value) public returns (bool sucess) {
         allowance[msg.sender][_spender] = _value;
         emit Approval(msg.sender, _spender, _value);
         return true;
@@ -58,5 +58,3 @@ contract Tether {
 
     }
 }
-
-
